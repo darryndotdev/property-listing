@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import propertiesData from '../../../data/property-listing-data.json';
+import data from '../../../data/property-listing-data.json';
 
 /**
  * /api/properties
@@ -16,7 +16,7 @@ export async function GET(request) {
     const locationsParam = searchParams.get('locations'); // "UK,France,Spain"
     const typeParam = searchParams.get('type'); // optional, if dataset has a type
 
-    let filtered = [...propertiesData];
+    let filtered = [...data];
 
     // Filter: superhost only
     if (superhostParam === 'true') {
