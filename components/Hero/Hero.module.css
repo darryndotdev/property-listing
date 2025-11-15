@@ -1,0 +1,25 @@
+.header {
+    display: grid;
+    justify-items: start;
+    align-items: start;
+    background-image: url(./../../public/hero-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 2rem;
+    min-height: 50vh;
+}
+
+.intro {
+    color: var(--card-background-colour);
+    font-size: clamp(1.25rem, 1.1786rem + 0.381vw, 1.625rem);
+    line-height: 1;
+    margin-top: 0.5rem;
+}
+
+@media (min-width: 40em) {
+    .header {
+        align-items: center;
+        min-height: 60vh;
+    }
+}
