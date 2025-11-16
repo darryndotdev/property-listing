@@ -52,7 +52,8 @@ h3 {
     line-height: 1;
 }
 
-h4 {
+h4,
+.h4 {
     color: var(--h4-colour);
     font-size: clamp(1.25rem, 1.1786rem + 0.381vw, 1.625rem);
     line-height: 1;

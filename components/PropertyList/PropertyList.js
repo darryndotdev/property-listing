@@ -14,7 +14,6 @@ function PropertyList() {
                 const res = await fetch(`/api/properties`);
                 const data = await res.json();
                 setProperties(data);
-                console.log(data);
             } catch (error) {
                 console.log(error);
             }
@@ -25,7 +24,9 @@ function PropertyList() {
     return (
         <Container>
             <ul className={styles.list}>
-                <PropertyItem />
+                {properties.map((property) => (
+                    <PropertyItem property={property} key={property.id} />
+                ))}
             </ul>
         </Container>
     );
