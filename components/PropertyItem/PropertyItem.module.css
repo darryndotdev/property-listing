@@ -6,6 +6,10 @@
     justify-content: space-between;
 }
 
+.imgDiv {
+    position: relative;
+}
+
 .img {
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;

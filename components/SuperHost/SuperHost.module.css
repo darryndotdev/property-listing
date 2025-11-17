@@ -1,0 +1,13 @@
+.host {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    background-color: var(--background-colour);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3rem;
+    font-size: 0.875rem;
+
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+}

@@ -4,12 +4,14 @@ import House from '../Icons/House';
 import Person from '../Icons/Person';
 import styles from './PropertyItem.module.css';
 import Star from '../Icons/Star';
+import SuperHost from '../SuperHost/SuperHost';
 
 function PropertyItem({ property }) {
     return (
         <li className={styles.item}>
             <div>
-                <div>
+                <div className={styles.imgDiv}>
+                    {property.superhost && <SuperHost />}
                     <Image
                         src={`${property.image}`}
                         width={358}
