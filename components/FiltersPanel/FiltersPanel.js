@@ -56,10 +56,10 @@ function FiltersPanel() {
                             type='radio'
                             id='norway'
                             name='input'
-                            value='norway'
+                            value='Norway'
                             className={styles.input}
                             onChange={(e) => setLocation(e.target.value)}
-                            checked={location === 'norway'}
+                            checked={location === 'Norway'}
                         />
                         <span className={styles.btn}>Norway</span>
                     </label>
@@ -68,10 +68,10 @@ function FiltersPanel() {
                             type='radio'
                             id='finland'
                             name='input'
-                            value='finland'
+                            value='Finland'
                             className={styles.input}
                             onChange={(e) => setLocation(e.target.value)}
-                            checked={location === 'finland'}
+                            checked={location === 'Finland'}
                         />
                         <span className={styles.btn}>Finland</span>
                     </label>
@@ -80,10 +80,10 @@ function FiltersPanel() {
                             type='radio'
                             id='sweden'
                             name='input'
-                            value='sweden'
+                            value='Sweden'
                             className={styles.input}
                             onChange={(e) => setLocation(e.target.value)}
-                            checked={location === 'sweden'}
+                            checked={location === 'Sweden'}
                         />
                         <span className={styles.btn}>Sweden</span>
                     </label>
@@ -92,10 +92,10 @@ function FiltersPanel() {
                             type='radio'
                             id='switzerland'
                             name='input'
-                            value='switzerland'
+                            value='Switzerland'
                             className={styles.input}
                             onChange={(e) => setLocation(e.target.value)}
-                            checked={location === 'switzerland'}
+                            checked={location === 'Switzerland'}
                         />
                         <span className={styles.btn}>Switzerland</span>
                     </label>
@@ -104,7 +104,7 @@ function FiltersPanel() {
                     <input
                         type='checkbox'
                         onChange={() => setIsSuperHost(!isSuperHost)}
-                        checked={searchParams.get('superhost') === 'true'}
+                        checked={isSuperHost}
                     />
                     Superhost
                 </label>

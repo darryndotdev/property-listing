@@ -12,15 +12,12 @@ export async function GET(request) {
 
     // 1. Superhost filter
     if (superhostParam === 'true') {
-        filtered = filtered.filter((p) => p.host?.isSuperhost === true);
+        filtered = filtered.filter((p) => p.superhost === true);
     }
 
-    // 2. Multiple countries filter
-    if (locationsParam) {
-        const selected = locationsParam.split(',').map((loc) => loc.trim());
-        filtered = filtered.filter((p) =>
-            selected.includes(p.location.country)
-        );
+    // 2. Single country filter
+    if (locationsParam && locationsParam !== 'all') {
+        filtered = filtered.filter((p) => p.location === locationsParam);
     }
 
     // 3. Property type filter
