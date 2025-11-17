@@ -32,7 +32,7 @@ function FiltersPanel() {
             params.delete('superhost');
         }
 
-        router.push(`${pathname}?${params.toString()}`);
+        router.replace(`${pathname}?${params.toString()}`, { scroll: false });
     }, [location, isSuperHost]);
 
     return (
