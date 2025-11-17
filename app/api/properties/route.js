@@ -1,41 +1,32 @@
 import { NextResponse } from 'next/server';
 import data from '../../../data/property-listing-data.json';
 
-/**
- * /api/properties
- * Supports:
- *   ?superhost=true
- *   ?locations=Norway,Sweden
- *   ?type=Apartment
- */
 export async function GET(request) {
     const { searchParams } = new URL(request.url);
 
-    // Parse filters from query params
-    const superhostParam = searchParams.get('superhost'); // "true" or "false"
-    const locationsParam = searchParams.get('locations'); // "UK,France,Spain"
-    const typeParam = searchParams.get('type'); // optional, if dataset has a type
+    const superhostParam = searchParams.get('superhost');
+    const locationsParam = searchParams.get('locations');
+    const typeParam = searchParams.get('type');
 
     let filtered = [...data];
 
-    // Filter: superhost only
+    // 1. Superhost filter
     if (superhostParam === 'true') {
-        filtered = filtered.filter((p) => p.superhost === true);
+        filtered = filtered.filter((p) => p.host?.isSuperhost === true);
     }
 
-    // Filter: multiple locations
+    // 2. Multiple countries filter
     if (locationsParam) {
-        const selectedLocations = locationsParam
-            .split(',')
-            .map((loc) => loc.trim());
+        const selected = locationsParam.split(',').map((loc) => loc.trim());
         filtered = filtered.filter((p) =>
-            selectedLocations.includes(p.location)
+            selected.includes(p.location.country)
         );
     }
 
-    // Filter: property type (only works if type exists in your JSON)
+    // 3. Property type filter
+    // Example types: "Apartment", "Private room", "Entire home"
     if (typeParam) {
-        filtered = filtered.filter((p) => p.type === typeParam);
+        filtered = filtered.filter((p) => p.propertyType === typeParam);
     }
 
     return NextResponse.json(filtered);
