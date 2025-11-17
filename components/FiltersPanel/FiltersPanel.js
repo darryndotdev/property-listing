@@ -47,7 +47,7 @@ function FiltersPanel() {
                             value='all'
                             className={styles.input}
                             onChange={(e) => setLocation(e.target.value)}
-                            checked={location === 'all' ? true : ''}
+                            checked={location === 'all'}
                         />
                         <span className={styles.btn}>All stays</span>
                     </label>
@@ -59,6 +59,7 @@ function FiltersPanel() {
                             value='norway'
                             className={styles.input}
                             onChange={(e) => setLocation(e.target.value)}
+                            checked={location === 'norway'}
                         />
                         <span className={styles.btn}>Norway</span>
                     </label>
@@ -70,6 +71,7 @@ function FiltersPanel() {
                             value='finland'
                             className={styles.input}
                             onChange={(e) => setLocation(e.target.value)}
+                            checked={location === 'finland'}
                         />
                         <span className={styles.btn}>Finland</span>
                     </label>
@@ -81,6 +83,7 @@ function FiltersPanel() {
                             value='sweden'
                             className={styles.input}
                             onChange={(e) => setLocation(e.target.value)}
+                            checked={location === 'sweden'}
                         />
                         <span className={styles.btn}>Sweden</span>
                     </label>
@@ -92,6 +95,7 @@ function FiltersPanel() {
                             value='switzerland'
                             className={styles.input}
                             onChange={(e) => setLocation(e.target.value)}
+                            checked={location === 'switzerland'}
                         />
                         <span className={styles.btn}>Switzerland</span>
                     </label>
@@ -100,7 +104,7 @@ function FiltersPanel() {
                     <input
                         type='checkbox'
                         onChange={() => setIsSuperHost(!isSuperHost)}
-                        checked={isSuperHost}
+                        checked={searchParams.get('superhost') === 'true'}
                     />
                     Superhost
                 </label>
