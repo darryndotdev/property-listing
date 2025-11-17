@@ -1,11 +1,39 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import styles from './FiltersPanel.module.css';
 
 function FiltersPanel() {
-    const [location, setLocation] = useState('all');
-    const [isSuperHost, setIsSuperHost] = useState(true);
+    const router = useRouter();
+    const pathname = usePathname();
+    const searchParams = useSearchParams();
+
+    const [location, setLocation] = useState(() => {
+        return searchParams.get('locations') || 'all';
+    });
+
+    const [isSuperHost, setIsSuperHost] = useState(() => {
+        return searchParams.get('superhost') === 'true';
+    });
+
+    useEffect(() => {
+        const params = new URLSearchParams(searchParams);
+
+        if (location === 'all') {
+            params.delete('locations');
+        } else {
+            params.set('locations', location);
+        }
+
+        if (isSuperHost) {
+            params.set('superhost', 'true');
+        } else {
+            params.delete('superhost');
+        }
+
+        router.push(`${pathname}?${params.toString()}`);
+    }, [location, isSuperHost]);
 
     return (
         <div className={styles.panel}>
