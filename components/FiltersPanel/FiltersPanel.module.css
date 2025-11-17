@@ -1,0 +1,11 @@
+.panel {
+    background-color: var(--card-background-colour);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -4rem;
+    padding: 3rem 0;
+
+    max-width: 86rem;
+    margin: 0 auto;
+}
