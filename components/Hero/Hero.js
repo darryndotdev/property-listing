@@ -1,3 +1,5 @@
+import { Suspense } from 'react';
+
 import FiltersPanel from '../FiltersPanel/FiltersPanel';
 import styles from './Hero.module.css';
 
@@ -12,7 +14,9 @@ function Hero() {
                     </p>
                 </div>
             </header>
-            <FiltersPanel />
+            <Suspense fallback={null}>
+                <FiltersPanel />
+            </Suspense>
         </div>
     );
 }
