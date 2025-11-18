@@ -4,3 +4,9 @@
     grid-gap: 1rem;
     padding-bottom: 4rem;
 }
+
+@media (min-width: 40em) {
+    .list {
+        grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    }
+}
