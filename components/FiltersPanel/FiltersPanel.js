@@ -112,12 +112,17 @@ function FiltersPanel() {
                             <span className={styles.btn}>Switzerland</span>
                         </label>
                     </fieldset>
-                    <label>
+
+                    <label className={styles.toggle} htmlFor='toggle'>
                         <input
                             type='checkbox'
+                            name='toggle'
+                            id='toggle'
+                            className={styles.toggleInput}
                             onChange={() => setIsSuperHost(!isSuperHost)}
                             checked={isSuperHost}
                         />
+                        <span className={styles.switch}></span>
                         Superhost
                     </label>
                 </form>

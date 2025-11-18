@@ -61,11 +61,53 @@
     background-color: var(--background-colour);
 }
 
-@media (min-width: 40em) {
-    /* .panel {
-        width: 100%;
-    } */
+.toggle {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
 
+.toggleInput {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.switch {
+    display: flex;
+    align-items: center;
+    width: 3.5rem;
+    height: 2rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: var(--background-colour);
+    transition: all ease-in 300ms;
+}
+
+.switch::before {
+    content: '';
+    position: absolute;
+    left: 3px;
+    width: 1.75rem;
+    height: 1.75rem;
+    background-color: white;
+    border-radius: 50%;
+    transition: all ease-in 300ms;
+}
+
+.toggleInput:checked + .switch {
+    background-color: var(--primary);
+}
+
+.toggleInput:checked + .switch::before {
+    transform: translateX(1.4rem);
+}
+
+@media (min-width: 40em) {
     .form {
         flex-direction: row;
         align-items: center;
