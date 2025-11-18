@@ -39,7 +39,8 @@ function PropertyItem({ property }) {
             </div>
             <div className={styles.price}>
                 <p>
-                    <span>${property.price}</span>/night
+                    <span className={styles.highlight}>${property.price}</span>
+                    /night
                 </p>
                 <div className={styles.detail}>
                     <Star />

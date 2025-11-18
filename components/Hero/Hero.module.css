@@ -17,13 +17,13 @@
     margin-top: 0.5rem;
 }
 
+.relative {
+    position: relative;
+}
+
 @media (min-width: 40em) {
     .header {
         align-items: center;
         min-height: 60vh;
     }
-}
-
-.relative {
-    position: relative;
 }

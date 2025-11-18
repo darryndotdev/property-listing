@@ -1,5 +1,5 @@
 .item {
-    border: 1px solid var(--colour);
+    border: 1px solid var(--border);
     border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
@@ -49,9 +49,7 @@
     border-top: 1px solid var(--colour);
 }
 
-/* .hr {
-    border: none;
-    height: 1px;
-    background-color: var(--colour);
-    margin-top: 1rem;
-} */
+.highlight {
+    color: var(--h2-colour);
+    font-size: 1.5rem;
+}

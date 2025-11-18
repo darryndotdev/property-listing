@@ -2,5 +2,5 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
     grid-gap: 1rem;
-    padding: 10rem 0;
+    padding-bottom: 4rem;
 }

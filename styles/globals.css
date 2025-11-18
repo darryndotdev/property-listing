@@ -3,15 +3,16 @@
 :root {
     --background-colour: #131826;
     --card-background-colour: #222a39;
-    --colour: #c2c7d0;
+    --border: #bfc4cc82;
+    --colour: #91959c;
     --primary: #4e80ee;
     --secondary: #f5c767;
     --h1-colour: #131826;
-    --h2-colour: #e0e3e7;
-    --h3-colour: #c2c7d0;
-    --h4-colour: #b3b9c5;
-    --h5-colour: #a4acba;
-    --h6-colour: #8891a4;
+    --h2-colour: #e5e8ec;
+    --h3-colour: #d3d8e2;
+    --h4-colour: #c2c9d5;
+    --h5-colour: #b8c1d0;
+    --h6-colour: #9da7bd;
 }
 
 body {
