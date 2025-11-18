@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏡 Property listing project
 
-## Getting Started
+A clean, responsive property listing interface with URL-based filtering, built using Next.js App Router, serverless API routes and dynamic client-side state synced with the browser URL.
 
-First, run the development server:
+## 🧰 Why I built this tool
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+I built this project to showcase how user input can drive dynamic, URL-based filtering, creating a responsive and performant interface. It’s a small but practical example of structuring features, managing state, and building interactive experiences in Next.js.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+-   **Dynamic filtering** by country and superhost status
+-   **URL-based search parameters** for shareable filters
+-   **Fast API responses** via Next.js serverless routes
+-   **Responsive UI** designed for modern devices
+-   **Smooth filter updates** with no page refresh
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🔜 Idea's to extend the project
 
-## Learn More
+-   Sort by price or rating
+-   Map view of properties
+-   Add to favourites / saved stays
+-   UI refinements and micro-interactions
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 Usage
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+[You can try it live here](https://property-listing-suoj.vercel.app/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠 Tech stack
 
-## Deploy on Vercel
+This project is built using the following technologies:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+-   Next.js 16 (App Router)
+-   React
+-   Serverless API Routes
+-   CSS Modules
+-   Vercel
+-   ESLint + Prettier
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🤝 Contributing
+
+This is a personal learning project, but feedback and suggestions are always welcome.
